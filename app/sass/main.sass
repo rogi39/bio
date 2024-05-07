@@ -233,7 +233,6 @@ img
 			line-height: 24px
 			font-weight: 300
 			margin-bottom: 24px
-			// display: flex
 			position: relative
 			&:before
 				content: "•"
@@ -260,10 +259,13 @@ img
 	margin: 0 auto
 	width: 100%
 	+media-breakpoint-up(xl)
-		max-width: 1750px
+		max-width: 1200px
 	&_text
 		+media-breakpoint-up(xl)
 			max-width: 811px
+	&_map
+		+media-breakpoint-up(xl)
+			max-width: 1750px
 
 .row
 	display: flex
@@ -340,16 +342,13 @@ img
 		display: none
 		+media-breakpoint-up(sm)
 			display: block
-			// margin-right: 38px
-		+media-breakpoint-up(md)
-			// margin-right: 48px
 	/* .header__lang */
 	&__lang
 		color: #fff
 		font-size: 14px
 		margin-left: 38px
 		+media-breakpoint-up(sm)
-			font-size: 20px
+			font-size: 16px
 			margin-left: 48px
 	&__toggle-menu
 		display: flex
@@ -406,11 +405,11 @@ img
 .logo
 	/* .logo__img */
 	&__img
-		max-width: 	100px
+		max-width: 100px
 		+media-breakpoint-up(sm)
-			max-width: 	140px
+			max-width: 140px
 		+media-breakpoint-up(md)
-			max-width: 	160px
+			max-width: 160px
 		+media-breakpoint-up(lg)
 			max-width: initial
 	&__img_green
@@ -427,7 +426,6 @@ img
 	top: 0
 	bottom: 0
 	z-index: 23
-	// padding: 10px 15px 30px 15px
 	transform: translateX(-100%)
 	transition: transform .35s ease
 	background-color: #fff
@@ -486,7 +484,7 @@ img
 
 .phone
 	font-weight: 400
-	font-size: 20px
+	font-size: 16px
 	line-height: 150%
 	color: #fff
 	&:hover
@@ -536,10 +534,6 @@ img
 			font-size: 40px
 		+media-breakpoint-up(md)
 			font-size: 46px
-		+media-breakpoint-up(lg)
-			font-size: 56px
-		+media-breakpoint-up(xl)
-			font-size: 66px
 	&__title_about
 		text-align: left
 		margin: 0
@@ -563,7 +557,7 @@ img
 		color: #fff
 		margin-top: 16px
 		+media-breakpoint-up(sm)
-			font-size: 24px
+			font-size: 18px
 			font-weight: 500
 			max-width: 458px
 		+media-breakpoint-up(wxp)
@@ -594,7 +588,6 @@ img
 		background-color: transparent
 	+media-breakpoint-up(sm)
 		padding: 16px 32px
-		font-size: 18px
 	&_dark
 		background-color: #0c4e4e
 		color: #fff
@@ -623,10 +616,7 @@ img
 		font-size: 38px
 		margin-bottom: 56px
 	+media-breakpoint-up(lg)
-		font-size: 48px
 		margin-bottom: 64px
-	+media-breakpoint-up(xl)
-		font-size: 52px
 	&_big
 		max-width: 993px
 	&_left
@@ -640,7 +630,6 @@ img
 		margin-bottom: 24px
 		+media-breakpoint-up(xl)
 			margin-bottom: 0
-			// position: absolute
 			z-index: 2
 
 .we-work
@@ -680,10 +669,9 @@ img
 		+media-breakpoint-up(sm)
 			margin-bottom: 38px
 		+media-breakpoint-up(xl)
-			font-size: 24px
+			font-size: 21px
 		+media-breakpoint-up(wxp)
 			margin-bottom: 48px
-			font-size: 30px
 	/* .we-work__item-img */
 	&__item-img
 		border-radius: 8px
@@ -691,7 +679,6 @@ img
 .marquee
 	position: relative
 	height: 50px
-	// margin-bottom: 80px
 	overflow: hidden
 	&_rtl
 		margin-bottom: 360px
@@ -712,19 +699,15 @@ img
 			color: #99D420
 			margin-right: 15px
 		+media-breakpoint-up(md)
-			font-size: 32px
+			font-size: 38px
 			margin-right: 35px
 			&:before
 				margin-right: 35px
 		+media-breakpoint-up(xl)
-			font-size: 38px
 		// margin-right: 48px
 
 .marquee-block
 	position: relative
-	// display: flex
-	// align-items: center
-	// justify-content: center
 	+media-breakpoint-up(md)
 		padding-top: 70px
 	+media-breakpoint-up(lg)
@@ -772,9 +755,8 @@ img
 		text-align: center
 		color: #fff
 		+media-breakpoint-up(sm)
-			font-size: 32px
+			font-size: 27px
 		+media-breakpoint-up(xl)
-			font-size: 38px
 
 .circle
 	max-width: 1139px
@@ -827,17 +809,18 @@ img
 	/* .circle__item-text*/
 	&__item-text
 		max-width: 218px
+		text-align: center
 		display: none
 		font-size: 14px
 		+media-breakpoint-up(md)
 			max-width: 230px
 		+media-breakpoint-up(lg)
-			font-size: 18px
+			font-size: 16px
 			max-width: 300px
 		+media-breakpoint-up(xl)
-			font-size: 20px
 	/* .circle__item-title*/
 	&__item-title
+		text-align: center
 		font-weight: 500
 		font-size: 16px
 		line-height: 120%
@@ -845,10 +828,10 @@ img
 		max-width: 208px
 		+media-breakpoint-up(md)
 			max-width: 218px
+			margin: 0 auto
 			font-size: 18px
 			text-align: center
 		+media-breakpoint-up(lg)
-			font-size: 24px
 	/* .circle__item */
 	&__item
 		position: absolute
@@ -861,12 +844,11 @@ img
 				display: block
 		+media-breakpoint-up(md)
 			transform: rotate(0deg)
-			&.active
-				.circle__item-text
-					display: block
-				.circle__item-title
-					display: none
-
+			//&.active
+			//	.circle__item-text
+			//		display: block
+			//	.circle__item-title
+			//		display: none
 	&__item_1
 		// top: 200px
 		// left: 250px
@@ -1031,7 +1013,7 @@ img
 	/* .with-us__title */
 	&__title
 		font-weight: 500
-		font-size: 38px
+		font-size: 28px
 		line-height: 120%
 		text-align: center
 		color: #262626
@@ -1057,7 +1039,7 @@ img
 		color: #262626
 		margin-bottom: 32px
 		+media-breakpoint-up(sm)
-			font-size: 38px
+			font-size: 28px
 	/* .goods__row */
 	&__row
 		display: flex
@@ -1117,11 +1099,9 @@ img
 			min-height: 45px
 			max-height: 45px
 		+media-breakpoint-up(xl)
-			font-size: 22px
 			min-height: 56px
 			max-height: 56px
 		+media-breakpoint-up(wxp)
-			font-size: 24px
 	/* .goods-item__img */
 	&__img
 
@@ -1190,24 +1170,20 @@ img
 		span
 			color: #99d420
 		+media-breakpoint-up(sm)
-			font-size: 45px
-		+media-breakpoint-up(xl)
-			font-size: 58px
-		+media-breakpoint-up(wxp)
-			font-size: 66px
+			font-size: 48px
 	/* .form-block__btn */
 	&__btn
 		text-align: center
 	/* .form-block__text */
 	&__text
 		font-weight: 400
-		font-size: 18px
+		font-size: 14px
 		line-height: 150%
 		text-align: center
 		color: #fff
 		margin-bottom: 24px
 		+media-breakpoint-up(sm)
-			font-size: 20px
+			font-size: 16px
 
 .footer
 	/* .footer__top */
@@ -1224,7 +1200,10 @@ img
 		gap: 12px
 	/* .footer__col */
 	&__col
-
+		&_none
+			display: none
+			+media-breakpoint-up(sm)
+				display: block
 	/* .footer__menu */
 	&__menu
 
@@ -1243,14 +1222,14 @@ img
 	/* .footer__menu-link */
 	&__menu-link
 		font-weight: 400
-		font-size: 18px
+		font-size: 14px
 		line-height: 150%
 		color: #262626
 		&:hover
 			text-decoration: none
 			color: #0c4e4e
 		+media-breakpoint-up(lg)
-			font-size: 20px
+			font-size: 16px
 	/* .footer__bottom */
 	&__bottom
 		display: flex
@@ -1280,9 +1259,7 @@ img
 		color: #0c4e4e
 		text-decoration: none
 	+media-breakpoint-up(lg)
-		font-size: 32px
-	+media-breakpoint-up(wxp)
-		font-size: 38px
+		font-size: 28px
 
 .stock
 	/* .stock__row */
@@ -1319,8 +1296,6 @@ img
 		+media-breakpoint-up(sm)
 			font-size: 28px
 			margin-bottom: 32px
-		+media-breakpoint-up(md)
-			font-size: 38px
 	/* .stock__list */
 	&__list
 		padding-left: 0
@@ -1383,7 +1358,6 @@ img
 			font-size: 28px
 		+media-breakpoint-up(md)
 			max-width: 550px
-			font-size: 38px
 			margin-bottom: 24px
 	/* .map-slider__list */
 	&__list
@@ -1409,7 +1383,7 @@ img
 		+media-breakpoint-up(sm)
 			font-size: 16px
 		+media-breakpoint-up(md)
-			font-size: 20px
+			font-size: 18px
 			padding: 4px 16px
 
 .slider-btn
@@ -1509,7 +1483,7 @@ img
 	/* .map__circle-item-num */
 	&__circle-item-num
 		font-weight: 500
-		font-size: 38px
+		font-size: 28px
 		line-height: 120%
 		background: linear-gradient(229deg, #0c4e4e 0%, #99d420 100%)
 		background-clip: text
@@ -1538,7 +1512,7 @@ img
 		left: calc( 50% - 9px )
 		bottom: -2px
 		font-weight: 500
-		font-size: 18px
+		font-size: 14px
 		line-height: 120%
 		color: #0c4e4e
 		&:after
@@ -1574,7 +1548,7 @@ img
 			background-color: #0c4e4e
 			color: #fff
 		+media-breakpoint-up(sm)
-			font-size: 20px
+			font-size: 16px
 			padding: 12px 24px
 
 .product-single
@@ -1615,7 +1589,7 @@ img
 		+media-breakpoint-up(sm)
 			top: 32px
 			left: 32px
-			font-size: 18px
+			font-size: 14px
 			padding: 8px 16px
 
 	/* .product-single__img */
@@ -1639,7 +1613,7 @@ img
 		+media-breakpoint-up(sm)
 			font-size: 34px
 		+media-breakpoint-up(lg)
-			font-size: 52px
+			font-size: 38px
 			margin-bottom: 40px
 	/* .product-single__items-block */
 	&__items-block
@@ -1657,8 +1631,6 @@ img
 			color: #656565
 		+media-breakpoint-up(sm)
 			font-size: 18px
-		+media-breakpoint-up(lg)
-			font-size: 20px
 
 	/* .product-single__info */
 	&__info
@@ -1673,7 +1645,6 @@ img
 			font-size: 18px
 		+media-breakpoint-up(lg)
 			margin-bottom: 40px
-			font-size: 20px
 		&:hover
 			text-decoration: none
 			color: #262626
@@ -1709,16 +1680,14 @@ img
 	/* .table__title */
 	&__title
 		font-weight: 500
-		font-size: 18px
+		font-size: 14px
 		line-height: 120%
 		color: #262626
 		flex: 1
 		margin-bottom: 8px
 		+media-breakpoint-up(sm)
 			margin-bottom: 0
-			font-size: 20px
-		+media-breakpoint-up(lg)
-			font-size: 24px
+			font-size: 18px
 	/* .table__text */
 	&__text
 		color: #656565
@@ -1726,8 +1695,6 @@ img
 		font-size: 16px
 		+media-breakpoint-up(sm)
 			font-size: 18px
-		+media-breakpoint-up(lg)
-			font-size: 20px
 
 .contacts
 	/* .contacts__row */
@@ -1764,28 +1731,24 @@ img
 	/* .contacts__info-item-key */
 	&__info-item-key
 		font-weight: 400
-		font-size: 16px
+		font-size: 14px
 		line-height: 150%
 		color: #b2b2b2
 		margin-bottom: 8px
 		+media-breakpoint-up(sm)
-			font-size: 18px
+			font-size: 16px
 			margin-bottom: 16px
-		+media-breakpoint-up(md)
-			font-size: 20px
 	/* .contacts__info-item-value */
 	&__info-item-value
 		font-weight: 500
-		font-size: 18px
+		font-size: 16px
 		line-height: 120%
 		color: #0c4e4e
 		&:hover
 			color: #0c4e4e
 			text-decoration: none
 		+media-breakpoint-up(sm)
-			font-size: 20px
-		+media-breakpoint-up(md)
-			font-size: 24px
+			font-size: 18px
 	/* .contacts__right */
 	&__right
 		+media-breakpoint-up(md)
@@ -1852,11 +1815,9 @@ img
 	background: #fff
 	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15)
 	padding: 60px 24px 24px 24px
-	// overflow: auto
 	+media-breakpoint-up(sm)
 		max-width: 768px
 		height: auto
-		// max-height: 100%
 		width: 100%
 		padding: 40px 50px 25px 50px
 		margin: 30px 0
@@ -1895,8 +1856,6 @@ img
 		font-size: 18px
 		font-weight: 600
 		margin-bottom: 24px
-		+media-breakpoint-up(sm)
-			font-size: 24px
 
 .form
 	&__btn-contacts-block
@@ -2166,7 +2125,7 @@ img
 	/* .page-404__404 */
 	&__404
 		font-weight: 900
-		font-size: 150px
+		font-size: 108px
 		line-height: 120%
 		text-align: center
 		color: #169122
@@ -2174,11 +2133,11 @@ img
 		position: absolute
 		z-index: -1
 		+media-breakpoint-up(sm)
-			font-size: 250px
+			font-size: 178px
 		+media-breakpoint-up(md)
-			font-size: 330px
+			font-size: 236px
 		+media-breakpoint-up(xl)
-			font-size: 486px
+			font-size: 347px
 	/* .page-404__block */
 	&__block
 		text-align: center
@@ -2196,13 +2155,13 @@ img
 	/* .page-404__title */
 	&__title
 		font-weight: 500
-		font-size: 26px
+		font-size: 20px
 		line-height: 120%
 		text-align: center
 		color: #262626
 		margin-bottom: 40px
 		+media-breakpoint-up(sm)
-			font-size: 38px
+			font-size: 28px
 @keyframes "fade"
 	from
 		opacity: 0

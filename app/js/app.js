@@ -145,50 +145,53 @@ function fadeOut(el, timeout) {
 }
 
 
-// const createExpertSlider = () => {
-// 	let slider = new Swiper(".map-slider", {
-// 		slidesPerView: 1,
-// 		loop: false,
-// 		effect: "fade",
-// 		fadeEffect: {
-// 			crossFade: true
-// 		},
-// 		// speed: 500,
-// 		navigation: {
-// 			nextEl: '.slider-btn__item_next',
-// 			prevEl: '.slider-btn__item_prev',
-// 		},
-// 		breakpoints: {},
-// 		on: {
-// 			slideChange: function () {
-// 				document.querySelector('.counter-slider-mobile__item').innerHTML = `0${slider.activeIndex+1}`;
-// 				// console.log(slider.activeIndex);
-// 				// console.log(slider.previousIndex);
-// 				let degUp = slider.activeIndex * 25;
-// 				let degDown = slider.activeIndex * -25;
+const createExpertSlider = () => {
+	let slider = new Swiper(".map-slider", {
+		slidesPerView: 1,
+		loop: false,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true
+		},
+		// speed: 500,
+		navigation: {
+			nextEl: '.slider-btn__item_next',
+			prevEl: '.slider-btn__item_prev',
+		},
+		autoplay: {
+			delay: 2500,
+		},
+		breakpoints: {},
+		on: {
+			slideChange: function () {
+				document.querySelector('.counter-slider-mobile__item').innerHTML = `0${slider.activeIndex+1}`;
+				// console.log(slider.activeIndex);
+				// console.log(slider.previousIndex);
+				let degUp = slider.activeIndex * 25;
+				let degDown = slider.activeIndex * -25;
 
-// 				if (slider.activeIndex > slider.previousIndex) {
-// 					// degUp = degUp + 10;
-// 					// degDown = degDown - 10;
-// 					document.querySelector('.map__circle').style.transform = `rotate(${degDown}deg)`;
-// 					document.querySelectorAll('.map__circle-item').forEach(el => {
-// 						el.style.transform = `rotate(${degUp}deg)`;
-// 					});
-// 				} else {
-// 					document.querySelector('.map__circle').style.transform = `rotate(${degDown}deg)`;
-// 					document.querySelectorAll('.map__circle-item').forEach(el => {
-// 						el.style.transform = `rotate(${degUp}deg)`;
-// 					});
-// 				}
-// 			},
-// 			// slideChangeTransitionStart: function () {
-// 			// 	console.log(document.querySelector('.map__circle'));
-// 			// }
-// 		}
-// 	});
-// }
+				if (slider.activeIndex > slider.previousIndex) {
+					// degUp = degUp + 10;
+					// degDown = degDown - 10;
+					document.querySelector('.map__circle').style.transform = `rotate(${degDown}deg)`;
+					document.querySelectorAll('.map__circle-item').forEach(el => {
+						el.style.transform = `rotate(${degUp}deg)`;
+					});
+				} else {
+					document.querySelector('.map__circle').style.transform = `rotate(${degDown}deg)`;
+					document.querySelectorAll('.map__circle-item').forEach(el => {
+						el.style.transform = `rotate(${degUp}deg)`;
+					});
+				}
+			},
+			// slideChangeTransitionStart: function () {
+			// 	console.log(document.querySelector('.map__circle'));
+			// }
+		}
+	});
+}
 
-// createExpertSlider();
+createExpertSlider();
 
 
 let filterItems = document.querySelectorAll('.filter__item');
