@@ -246,6 +246,10 @@
 								document.querySelector(`.circle__path[data-circle-path="${e.target.closest('.circle__item').dataset.circleItem}"]`).classList.add('active');
 								e.target.closest('.circle__item').classList.add('active');
 							}
+							if (e.target.classList.contains('circle__item-title')) {
+								document.querySelector(`.circle__path[data-circle-path="${e.target.closest('.circle__item').dataset.circleItem}"]`).classList.add('active');
+								e.target.closest('.circle__item').classList.add('active');
+							}
 						});
 						circle.addEventListener('mouseout', function (e) {
 							if (e.target.classList.contains('circle__path')) {
