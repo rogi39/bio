@@ -1,0 +1,23 @@
+.map-buttons {
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    top: 0;
+    left: calc((100vw - 1750px) / 2 + 1750px * 0.43);
+    height: 100%;
+    z-index: 5;
+  }
+
+  &__wrapper {
+    @include media-breakpoint-up(xl) {
+      position: sticky;
+      left: 0;
+      top: 0;
+      height: calc(100vh);
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: end;
+      padding-bottom: 15px;
+    }
+  }
+}

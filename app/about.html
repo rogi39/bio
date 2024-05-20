@@ -1,324 +1,415 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>OptimizedHTML 5</title>
+    <meta name="description" content="Startup HTML template OptimizedHTML 5" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="images/favicon.png" />
+    <meta property="og:image" content="images/dest/preview.jpg" />
+    <link rel="stylesheet" href="css/app.min.css" />
+  </head>
 
-<head>
+  <body>
+    <div class="overlay"></div>
 
-	<meta charset="utf-8">
-	<title>OptimizedHTML 5</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
-	<meta name="viewport" content="width=device-width">
-	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dest/preview.jpg">
-	<link rel="stylesheet" href="css/app.min.css">
+    <header class="header">
+      <div class="container">
+        <div class="header__row">
+          <div class="header__left">
+            <a href="#" class="logo">
+              <img
+                src="images/logo.svg"
+                alt="logo"
+                class="logo__img logo__img_white"
+              />
+              <img
+                src="images/logo-green.svg"
+                alt="logo"
+                class="logo__img logo__img_green"
+              />
+            </a>
+          </div>
+          <div class="header__center">
+            <nav class="menu">
+              <div class="menu__top">
+                <a href="#" class="logo">
+                  <img
+                    src="images/logo-green.svg"
+                    alt="logo"
+                    class="logo__img"
+                  />
+                </a>
+                <span class="header__toggle-menu" id="toggle-menu-close"
+                  ><span
+                    class="header__toggle-line header__toggle-line_dark"
+                  ></span
+                ></span>
+              </div>
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">О компании</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Каталог продукции</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+              <div class="menu__phone">
+                <a href="#" class="phone phone_dark">+7 (499) 704-04-34</a>
+              </div>
+            </nav>
+          </div>
+          <div class="header__right">
+            <div class="header__phone">
+              <a href="#" class="phone">+7 (499) 704-04-34</a>
+            </div>
+            <div class="header__lang">RUS</div>
+            <span class="header__toggle-menu" id="toggle-menu"
+              ><span class="header__toggle-line"></span
+            ></span>
+          </div>
+        </div>
+      </div>
+    </header>
 
-</head>
+    <main class="main main_nopt">
+      <section
+        class="first first_about"
+        style="background-image: url(&quot;images/dest/about-bg.jpg&quot;)"
+      >
+        <div class="container">
+          <div class="first__block first__block_about">
+            <div class="breadcrumb-block">
+              <ul class="breadcrumb breadcrumb_white">
+                <li class="breadcrumb__item">
+                  <a href="#" class="breadcrumb__link">Главная</a>
+                </li>
+                <li class="breadcrumb__item breadcrumb__item_active">
+                  О центре
+                </li>
+              </ul>
+            </div>
+            <h1 class="first__title first__title_about">
+              Наша главная цель - обеспечить своевременную поставку качественных
+              аминокислот
+            </h1>
+            <div class="first__about-text">
+              Стремимся обеспечить индивидуальный подход к каждому клиенту и
+              проводим тщательный отбор незаменимых аминокислот
+            </div>
+          </div>
+        </div>
+      </section>
 
-<body>
-	<div class="overlay"></div>
-	<header class="header">
-		<div class="container">
-			<div class="header__row">
-				<div class="header__left">
-					<a href="#" class="logo">
-						<img src="images/logo.svg" alt="logo" class="logo__img logo__img_white">
-						<img src="images/logo-green.svg" alt="logo" class="logo__img logo__img_green">
-					</a>
-				</div>
-				<div class="header__center">
-					<nav class="menu">
-						<div class="menu__top">
-							<a href="#" class="logo">
-								<img src="images/logo-green.svg" alt="logo" class="logo__img">
-							</a>
-							<span class="header__toggle-menu" id="toggle-menu-close"><span class="header__toggle-line header__toggle-line_dark"></span></span>
-						</div>
-						<ul class="menu__list">
-							<li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Каталог продукции</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
-						</ul>
-						<div class="menu__phone">
-							<a href="#" class="phone phone_dark">+7 (499) 704-04-34</a>
-						</div>
-					</nav>
-				</div>
-				<div class="header__right">
-					<div class="header__phone">
-						<a href="#" class="phone">+7 (499) 704-04-34</a>
-					</div>
-					<div class="header__lang">RUS</div>
-					<span class="header__toggle-menu" id="toggle-menu"><span class="header__toggle-line"></span></span>
-				</div>
+      <section class="section map">
+        <div class="map__circle-wrapper">
+          <div class="map__circle-inner-wrapper">
+            <div class="map__circle">
+              <div class="map__circle-item map__circle-item_1">
+                <div class="map__circle-item-t"></div>
+                <div class="map__circle-item-num">01</div>
+              </div>
+              <div class="map__circle-item map__circle-item_2">
+                <div class="map__circle-item-t"></div>
+                <div class="map__circle-item-num">02</div>
+              </div>
+              <div class="map__circle-item map__circle-item_3">
+                <div class="map__circle-item-t"></div>
+                <div class="map__circle-item-num">03</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-			</div>
-		</div>
-	</header>
+        <div class="container container_map">
+          <div class="map-title">
+            <div class="map-title__wrapper">
+              <h2 class="title title_map">
+                <span>Отлаженные процессы</span> на всех этапах работы
+              </h2>
+            </div>
+          </div>
 
-	<main class="main main_nopt">
-		<section class="first first_about" style="background-image: url('images/dest/about-bg.jpg');">
-			<div class="container">
+          <div class="swiper map-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide map-slider__slide">
+                <div class="map-slider__block">
+                  <div class="map-slider__title">
+                    Импортируем аминокислоты из Европы и Азии
+                  </div>
+                  <ul class="map-slider__list">
+                    <li class="map-slider__list-item">Китай</li>
+                    <li class="map-slider__list-item">Малайзия</li>
+                    <li class="map-slider__list-item">Индонезия</li>
+                    <li class="map-slider__list-item">Бразилия</li>
+                    <li class="map-slider__list-item">Франция</li>
+                    <li class="map-slider__list-item">Южная Корея</li>
+                    <li class="map-slider__list-item">Белоруссия</li>
+                  </ul>
+                </div>
+                <img src="images/europe.svg" alt="" />
+              </div>
+              <div class="swiper-slide map-slider__slide">
+                <div class="map-slider__block">
+                  <div class="map-slider__title">
+                    Импортируем аминокислоты из Африки
+                  </div>
+                  <ul class="map-slider__list">
+                    <li class="map-slider__list-item">Малайзия</li>
+                    <li class="map-slider__list-item">Индонезия</li>
+                    <li class="map-slider__list-item">Бразилия</li>
+                    <li class="map-slider__list-item">Южная Корея</li>
+                    <li class="map-slider__list-item">Белоруссия</li>
+                  </ul>
+                </div>
+                <img src="images/europe.svg" alt="" />
+              </div>
+              <div class="swiper-slide map-slider__slide">
+                <div class="map-slider__block">
+                  <div class="map-slider__title">
+                    Импортируем аминокислоты из Австралии
+                  </div>
+                  <ul class="map-slider__list">
+                    <li class="map-slider__list-item">Малайзия</li>
+                    <li class="map-slider__list-item">Индонезия</li>
+                    <li class="map-slider__list-item">Франция</li>
+                    <li class="map-slider__list-item">Белоруссия</li>
+                  </ul>
+                </div>
+                <img src="images/europe.svg" alt="" />
+              </div>
+            </div>
+          </div>
 
-				<div class="first__block first__block_about">
-					<div class="breadcrumb-block">
-						<ul class="breadcrumb breadcrumb_white">
-							<li class="breadcrumb__item">
-								<a href="#" class="breadcrumb__link">Главная</a>
-							</li>
-							<li class="breadcrumb__item breadcrumb__item_active">О центре</li>
-						</ul>
-					</div>
-					<h1 class="first__title first__title_about">Наша главная цель - обеспечить своевременную поставку качественных аминокислот</h1>
-					<div class="first__about-text">Стремимся обеспечить индивидуальный подход к каждому клиенту и проводим тщательный отбор незаменимых аминокислот</div>
-				</div>
-			</div>
-		</section>
+          <div class="map-buttons">
+            <div class="map-buttons__wrapper">
+              <div class="slider-btn">
+                <div class="slider-btn__item slider-btn__item_prev">
+                  <svg class="slider-btn__svg">
+                    <use xlink:href="images/sprite.svg#arrow"></use>
+                  </svg>
+                </div>
+                <div class="slider-btn__item slider-btn__item_next">
+                  <svg class="slider-btn__svg">
+                    <use xlink:href="images/sprite.svg#arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
 
-		<section class="section map">
-			<div class="map__circle">
-				<div class="map__circle-item map__circle-item_1">
-					<div class="map__circle-item-t"></div>
-					<div class="map__circle-item-num">01</div>
-				</div>
-				<div class="map__circle-item map__circle-item_2">
-					<div class="map__circle-item-t"></div>
-					<div class="map__circle-item-num">02</div>
-				</div>
-				<div class="map__circle-item map__circle-item_3">
-					<div class="map__circle-item-t"></div>
-					<div class="map__circle-item-num">03</div>
-				</div>
-			</div>
-			<div class="container container_map">
-				<h2 class="title title_map"><span>Отлаженные процессы</span> на всех этапах работы</h2>
-				<div class="swiper map-slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide map-slider__slide">
-							<div class="map-slider__block">
-								<div class="map-slider__title">Импортируем аминокислоты из Европы и Азии</div>
-								<ul class="map-slider__list">
-									<li class="map-slider__list-item">Китай</li>
-									<li class="map-slider__list-item">Малайзия</li>
-									<li class="map-slider__list-item">Индонезия</li>
-									<li class="map-slider__list-item">Бразилия</li>
-									<li class="map-slider__list-item">Франция</li>
-									<li class="map-slider__list-item">Южная Корея</li>
-									<li class="map-slider__list-item">Белоруссия</li>
-								</ul>
-							</div>
-							<img src="images/europe.svg" alt="">
-						</div>
-						<div class="swiper-slide map-slider__slide">
-							<div class="map-slider__block">
-								<div class="map-slider__title">Импортируем аминокислоты из Африки</div>
-								<ul class="map-slider__list">
-									<li class="map-slider__list-item">Малайзия</li>
-									<li class="map-slider__list-item">Индонезия</li>
-									<li class="map-slider__list-item">Бразилия</li>
-									<li class="map-slider__list-item">Южная Корея</li>
-									<li class="map-slider__list-item">Белоруссия</li>
-								</ul>
-							</div>
-							<img src="images/europe.svg" alt="">
-						</div>
-						<div class="swiper-slide map-slider__slide">
-							<div class="map-slider__block">
-								<div class="map-slider__title">Импортируем аминокислоты из Австралии</div>
-								<ul class="map-slider__list">
-									<li class="map-slider__list-item">Малайзия</li>
-									<li class="map-slider__list-item">Индонезия</li>
-									<li class="map-slider__list-item">Франция</li>
-									<li class="map-slider__list-item">Белоруссия</li>
-								</ul>
-							</div>
-							<img src="images/europe.svg" alt="">
-						</div>
-					</div>
+          <div class="counter-slider-mobile">
+            <div class="counter-slider-mobile__line"></div>
+            <div class="counter-slider-mobile__item">01</div>
+          </div>
+        </div>
+      </section>
 
+      <section class="section">
+        <div class="container">
+          <h2 class="title title_wi">
+            Как и где мы храним <span>продукцию</span>
+          </h2>
+          <div class="stock">
+            <div class="stock__row">
+              <div class="stock__col">
+                <div class="stock__left">
+                  <div class="stock__title">
+                    Склад в г. Дмитров, Московская область
+                  </div>
+                  <img
+                    src="images/dest/stock.jpg"
+                    alt=""
+                    class="stock__right-img stock__right-img_mobile"
+                  />
+                  <ul class="stock__list">
+                    <li class="stock__list-item">
+                      Соблюдение условий хранения по всем продуктам в
+                      рекомендуемых диапазонах влажности и температуры
+                    </li>
+                    <li class="stock__list-item">
+                      FIFO, Партийный учет товара
+                    </li>
+                    <li class="stock__list-item">
+                      Дератизация и соблюдение норм санпина
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="stock__col">
+                <div class="stock__right">
+                  <img
+                    src="images/dest/stock.jpg"
+                    alt=""
+                    class="stock__right-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-				</div>
-				<div class="slider-btn">
-					<div class="slider-btn__item slider-btn__item_prev">
-						<svg class="slider-btn__svg">
-							<use xlink:href="images/sprite.svg#arrow"></use>
-						</svg>
-					</div>
-					<div class="slider-btn__item slider-btn__item_next">
-						<svg class="slider-btn__svg">
-							<use xlink:href="images/sprite.svg#arrow"></use>
-						</svg>
-					</div>
-				</div>
-				<div class="counter-slider-mobile">
-					<div class="counter-slider-mobile__line"></div>
-					<div class="counter-slider-mobile__item">01</div>
-				</div>
-			</div>
-		</section>
+      <section class="section">
+        <div class="container">
+          <h2 class="title title_big">
+            Сотрудничаем с <span>ведущими производителями</span> в кормовой
+            индустрии
+          </h2>
+          <div class="collab">
+            <div class="collab__row">
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab1.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab2.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab3.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab4.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab5.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab6.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab7.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab8.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+              <div class="collab__col">
+                <div class="collab__item">
+                  <img
+                    src="images/dest/collab9.png"
+                    alt=""
+                    class="collab__img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-		<section class="section">
-			<div class="container">
-				<h2 class="title title_wi">Как и где мы храним <span>продукцию</span></h2>
-				<div class="stock">
-					<div class="stock__row">
-						<div class="stock__col">
-							<div class="stock__left">
-								<div class="stock__title">Склад в г. Дмитров, Московская область</div>
-								<img src="images/dest/stock.jpg" alt="" class="stock__right-img stock__right-img_mobile">
-								<ul class="stock__list">
-									<li class="stock__list-item">Соблюдение условий хранения по всем продуктам в рекомендуемых диапазонах влажности и температуры</li>
-									<li class="stock__list-item">FIFO, Партийный учет товара</li>
-									<li class="stock__list-item">Дератизация и соблюдение норм санпина</li>
-								</ul>
-							</div>
-						</div>
-						<div class="stock__col">
-							<div class="stock__right">
-								<img src="images/dest/stock.jpg" alt="" class="stock__right-img">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+      <div class="section">
+        <div class="container">
+          <div class="form-block">
+            <div class="form-block__title">
+              Ответим на все <span>интересующие Вас вопросы</span>
+            </div>
+            <div class="form-block__text">
+              Заполните форму, менеджер свяжется с Вами в течение 1 часа
+            </div>
+            <div class="form-block__btn">
+              <a href="#" class="btn">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-		<!-- <section class="section">
-			<div class="with-us">
-				<div class="container">
-					<h2 class="title title_big">Почему сотрудничество c нами будет <span>эффективным и надёжным?</span></h2>
-					<div class="with-us__block">
-						<div class="with-us__chart">
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__row">
+            <div class="footer__col">
+              <div class="time">Пн-Вс 09:00-20:00</div>
+              <div>
+                <a href="#" class="phone-big">+7 (499) 704-04-34</a>
+              </div>
+              <div>
+                <a href="#" class="mail">info@agritechbio.com</a>
+              </div>
+            </div>
+            <div class="footer__col">
+              <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link">О компании</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link">Каталог продукции</a>
+                  </li>
+                  <li class="footer__menu-item">
+                    <a href="#" class="footer__menu-link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__col">
+              <a href="#" class="btn btn_dark">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__text">© ООО Агритек Био, 2023</div>
+          <div class="footer__text">Политика конфиденциальности</div>
+          <div class="footer__text">Разработка сайта - Choose</div>
+        </div>
+      </div>
+    </footer>
 
-							<div class="with-us__chart-pie" style="transform:rotate(-60deg);">
-								<div class="with-us__chart-el"></div>
-							</div>
-							<div class="with-us__chart-pie" style="transform:rotate(0deg);">
-								<div class="with-us__chart-el"></div>
-							</div>
-							<div class="with-us__chart-pie" style="transform:rotate(60deg);">
-								<div class="with-us__chart-el"></div>
-							</div>
-							<div class="with-us__chart-pie" style="transform:rotate(120deg);">
-								<div class="with-us__chart-el"></div>
-							</div>
-							<div class="with-us__chart-pie" style="transform:rotate(180deg);">
-								<div class="with-us__chart-el"></div>
-							</div>
-							<div class="with-us__chart-pie" style="transform:rotate(240deg);">
-								<div class="with-us__chart-el"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
+    <script src="js/app.min.js"></script>
 
-		<section class="section">
-			<div class="container">
-				<h2 class="title title_big">Сотрудничаем с <span>ведущими производителями</span> в кормовой индустрии</h2>
-				<div class="collab">
-					<div class="collab__row">
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab1.png" alt="" class="collab__img">
-							</div>
-						</div>
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab2.png" alt="" class="collab__img">
-							</div>
-						</div>
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab3.png" alt="" class="collab__img">
-							</div>
-						</div>
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab4.png" alt="" class="collab__img">
-							</div>
-						</div>
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab5.png" alt="" class="collab__img">
-							</div>
-						</div>
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab6.png" alt="" class="collab__img">
-							</div>
-						</div>
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab7.png" alt="" class="collab__img">
-							</div>
-						</div>
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab8.png" alt="" class="collab__img">
-							</div>
-						</div>
-						<div class="collab__col">
-							<div class="collab__item">
-								<img src="images/dest/collab9.png" alt="" class="collab__img">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<div class="section">
-			<div class="container">
-				<div class="form-block">
-					<div class="form-block__title">Ответим на все <span>интересующие Вас вопросы</span></div>
-					<div class="form-block__text">Заполните форму, менеджер свяжется с Вами в течение 1 часа</div>
-					<div class="form-block__btn">
-						<a href="#" class="btn">Оставить заявку</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-	</main>
-
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__top">
-				<div class="footer__row">
-					<div class="footer__col">
-						<div class="time">Пн-Вс 09:00-20:00</div>
-						<div>
-							<a href="#" class="phone-big">+7 (499) 704-04-34</a>
-						</div>
-						<div>
-							<a href="#" class="mail">info@agritechbio.com</a>
-						</div>
-					</div>
-					<div class="footer__col">
-						<nav class="footer__menu">
-							<ul class="footer__menu-list">
-								<li class="footer__menu-item"><a href="#" class="footer__menu-link">О компании</a></li>
-								<li class="footer__menu-item"><a href="#" class="footer__menu-link">Каталог продукции</a></li>
-								<li class="footer__menu-item"><a href="#" class="footer__menu-link">Контакты</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="footer__col">
-						<a href="#" class="btn btn_dark">Оставить заявку</a>
-					</div>
-				</div>
-			</div>
-			<div class="footer__bottom">
-				<div class="footer__text">© ООО Агритек Био, 2023</div>
-				<div class="footer__text">Политика конфиденциальности</div>
-				<div class="footer__text">Разработка сайта - Choose</div>
-			</div>
-		</div>
-	</footer>
-
-	<script src="js/app.min.js"></script>
-
-</body>
-
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  </body>
 </html>

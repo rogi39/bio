@@ -1,4 +1,9 @@
 @import config
+@import './components/_scroll-snap-container'
+@import './components/_map-trigger'
+@import './components/_map-item'
+@import './components/_map-title'
+@import './components/_map-buttons'
 
 .noscroll
 	overflow: hidden
@@ -1325,9 +1330,23 @@ img
 			display: none
 
 .map-slider
+	+media-breakpoint-up(xl)
+		height: 100vh
+
+	.swiper-wrapper
+		+media-breakpoint-up(xl)
+			display: block
+
 	/* .map-slider__slide */
 	&__slide
 		position: relative
+
+		+media-breakpoint-up(xl)
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100vh
 	/* .map-slider__block */
 	&__block
 		position: absolute
@@ -1392,10 +1411,6 @@ img
 	justify-content: space-between
 	+media-breakpoint-up(xl)
 		justify-content: flex-start
-		z-index: 6
-		bottom: 0
-		left: 43%
-		position: absolute
 	+media-breakpoint-up(wxpp)
 		bottom: 150px
 	/* .slider-btn__item */
@@ -1443,6 +1458,23 @@ img
 .map
 	position: relative
 	overflow: hidden
+	+media-breakpoint-up(xl)
+		overflow: visible
+	&__circle-wrapper
+		+media-breakpoint-up(xl)
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+	&__circle-inner-wrapper
+		+media-breakpoint-up(xl)
+			position: sticky
+			z-index: 2
+			top: 0
+			left: 0
+			overflow: hidden
+			height: 1300px
+			width: 1300px
 	&__circle
 		display: none
 		+media-breakpoint-up(xl)
@@ -1452,12 +1484,9 @@ img
 			border: 1px solid #d6d6d6
 			border-radius: 50%
 			position: absolute
-			z-index: 2
 			left: -60%
-			bottom: -70%
+			bottom: -30%
 			transition: transform .35s ease-out
-			+media-breakpoint-up(wxpp)
-				left: -30%
 	/* .map__circle-item */
 	&__circle-item
 		transform-origin: left bottom
@@ -1466,13 +1495,13 @@ img
 		position: absolute
 		transition: transform .35s ease-out
 	&__circle-item_1
-		right: 110px
+		right: 130px
 		top: 190px
 	&__circle-item_2
-		right: -38px
+		right: -23px
 		top: 480px
 	&__circle-item_3
-		right: -14px
+		right: -1px
 		top: 830px
 		// transform: rotate(-20deg)
 	/* .map__circle-item-t */

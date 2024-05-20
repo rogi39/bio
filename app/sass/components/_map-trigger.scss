@@ -1,0 +1,26 @@
+.map-trigger {
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    // height: 100vh;
+  }
+
+  &__item {
+    opacity: 0;
+    position: sticky;
+    top: 200px;
+    left: 0;
+    width: 100vw;
+    flex: 0 0 auto;
+    // height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:first-of-type {
+      opacity: 1;
+    }
+  }
+}
