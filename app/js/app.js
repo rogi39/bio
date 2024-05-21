@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             trigger: ".map-slider",
             pin: true,
             scrub: 1,
-            // snap: 1 / (sections.length - 1),
+            snap: 1 / (sections.length - 1),
             end: "+=1000",
             // base vertical scrolling on how wide the container is so it feels more natural.
             // end: "+=300",
@@ -69,9 +69,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         function slideToIndex(index) {
+          let totalMovement = index * 500;
+
+          y = Math.round(timeLine.scrollTrigger.start + totalMovement);
+
           gsap.to(window, {
+            duration: 1,
+            ease: "power4.out",
             scrollTo: {
-              y: 80 + mapNode.offsetTop + index * 500,
+              y: y,
             },
           });
         }
