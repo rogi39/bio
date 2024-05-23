@@ -2,8 +2,10 @@
   @include media-breakpoint-up(xl) {
     position: absolute;
     top: 80px;
-    left: 0;
-    height: calc(100% - 1034px);
+    left: calc((100vw - 1200px) / 2);
+    height: calc(
+      100% - (1300px / 2) - 110px - (100vh - (1300px / 2) - 91px - 110px) + 33px
+    );
     z-index: 2;
     padding: 0 15px;
   }

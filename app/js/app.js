@@ -40,6 +40,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Expert Slider
     (() => {
+      if (!document.querySelector(".map-slider")) {
+        return;
+      }
+
       if (window.matchMedia("(min-width: 1200px)").matches) {
         gsap.registerPlugin(ScrollTrigger);
 

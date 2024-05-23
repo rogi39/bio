@@ -1,7 +1,4 @@
 @import config
-@import './components/_scroll-snap-container'
-@import './components/_map-trigger'
-@import './components/_map-item'
 @import './components/_map-title'
 @import './components/_map-buttons'
 
@@ -293,6 +290,8 @@ img
 		transform: translateY(-100%)
 		border-bottom: 1px solid #d6d6d6
 		padding: 13px 0px
+		+media-breakpoint-up(lg)
+			padding: 7px 0
 		.phone
 			color: $black
 		.header__lang
@@ -307,6 +306,11 @@ img
 			display: none
 		.logo__img_green
 			display: block
+			height: 40px
+			object-fit: contain
+		.menu
+			+media-breakpoint-up(lg)
+				font-size: 16px
 	&.on
 		transform: translateY(0)
 		transition: transform .35s ease-in-out
@@ -471,12 +475,12 @@ img
 		color: $black
 		transition: color .35s ease-out
 		&:hover
-			color: #EBF6D2
+			color: #0c4e4e
 			text-decoration: none
 		+media-breakpoint-up(lg)
 			color: #fff
 			&:hover
-				color: #EBF6D2
+				color: #0c4e4e
 	/* .menu__top */
 	&__top
 		display: flex
@@ -611,7 +615,7 @@ img
 	margin: 0 auto
 	margin-bottom: 24px
 	span
-		background: linear-gradient(90deg, #266746 0%, #66A431 100%)
+		background: linear-gradient(90deg, #266746 0%, #66A431 50%, #266746 100%)
 		background-clip: text
 		-webkit-background-clip: text
 		-webkit-text-fill-color: transparent
@@ -619,7 +623,7 @@ img
 		font-size: 32px
 		margin-bottom: 40px
 	+media-breakpoint-up(md)
-		font-size: 38px
+		font-size: 32px
 		margin-bottom: 56px
 	+media-breakpoint-up(lg)
 		margin-bottom: 64px
@@ -705,7 +709,7 @@ img
 			color: #99D420
 			margin-right: 15px
 		+media-breakpoint-up(md)
-			font-size: 38px
+			font-size: 30px
 			margin-right: 35px
 			&:before
 				margin-right: 35px
@@ -717,7 +721,7 @@ img
 	+media-breakpoint-up(md)
 		padding-top: 70px
 	+media-breakpoint-up(lg)
-		padding-top: 150px
+		padding-top: 110px
 	/* .marquee-block__logo-block */
 	&__logo-block
 		border-radius: 16px
@@ -739,14 +743,9 @@ img
 		+media-breakpoint-up(md)
 			top: 0
 		+media-breakpoint-up(lg)
-
 			height: 400px
 			width: 500px
 			left: calc(50% - 250px)
-		+media-breakpoint-up(xl)
-			left: calc(50% - 305px)
-			height: 479px
-			width: 611px
 	/* .marquee-block__logo */
 	&__logo
 		position: absolute
@@ -755,6 +754,7 @@ img
 			max-width: initial
 	/* .marquee-block__title */
 	&__title
+		padding: 0 10%
 		font-weight: 500
 		font-size: 25px
 		line-height: 120%
@@ -765,11 +765,11 @@ img
 		+media-breakpoint-up(xl)
 
 .circle
-	max-width: 800px
+	max-width: 650px
 	margin: 0 auto
 	position: absolute
-	min-width: 740px
-	left: calc(50% - 370px)
+	min-width: 650px
+	left: calc(50% - 325px)
 	transform: rotate(30deg)
 	transition: transform .35s ease-out
 	+media-breakpoint-up(md)
@@ -819,7 +819,8 @@ img
 		display: none
 		font-size: 14px
 		+media-breakpoint-up(md)
-			max-width: 230px
+			max-width: 150px
+			font-size: 12px
 		// +media-breakpoint-up(lg)
 		// 	font-size: 14px
 		// 	max-width: 200px
@@ -833,9 +834,9 @@ img
 		color: #262626
 		max-width: 208px
 		+media-breakpoint-up(md)
-			max-width: 218px
+			max-width: 150px
 			margin: 0 auto
-			font-size: 18px
+			font-size: 16px
 			text-align: center
 		+media-breakpoint-up(lg)
 	/* .circle__item */
@@ -847,7 +848,7 @@ img
 			.circle__item-text
 				display: block
 			.circle__item-title
-				display: block
+				display: none
 		+media-breakpoint-up(md)
 			transform: rotate(0deg)
 			//&.active
@@ -1347,6 +1348,17 @@ img
 			left: 0
 			width: 100%
 			height: 100vh
+			display: flex
+			justify-content: center
+			align-items: center
+
+	/* .map-slider__slide-img */
+	&__slide-img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: contain
+
 	/* .map-slider__block */
 	&__block
 		position: absolute
@@ -1460,12 +1472,16 @@ img
 	overflow: hidden
 	+media-breakpoint-up(xl)
 		overflow: visible
+		padding: 0
 	&__circle-wrapper
 		+media-breakpoint-up(xl)
 			height: 100%
 			position: absolute
 			top: 0
 			left: 0
+	&__circle-position-wrapper
+		+media-breakpoint-up(xl)
+			transform: translate(-50%, 50%)
 	&__circle-inner-wrapper
 		+media-breakpoint-up(xl)
 			position: sticky
@@ -1473,8 +1489,11 @@ img
 			top: 0
 			left: 0
 			overflow: hidden
-			height: 1300px
+			height: 100vh
 			width: 1300px
+			display: flex
+			align-items: flex-end
+			justify-content: flex-start
 	&__circle
 		display: none
 		+media-breakpoint-up(xl)
@@ -1483,9 +1502,6 @@ img
 			width: 1300px
 			border: 1px solid #d6d6d6
 			border-radius: 50%
-			position: absolute
-			left: -60%
-			bottom: -30%
 			transition: transform .35s ease-out
 	/* .map__circle-item */
 	&__circle-item
@@ -1643,7 +1659,7 @@ img
 		+media-breakpoint-up(sm)
 			font-size: 34px
 		+media-breakpoint-up(lg)
-			font-size: 38px
+			font-size: 32px
 			margin-bottom: 40px
 	/* .product-single__items-block */
 	&__items-block
