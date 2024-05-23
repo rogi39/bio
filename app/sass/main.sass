@@ -198,7 +198,7 @@ img
 		margin-bottom: 30px
 		border-radius: 15px
 	h2
-		font-size: 20px
+		font-size: 18px
 		line-height: 26px
 		color: $text
 		font-weight: 600
@@ -245,8 +245,6 @@ img
 	padding: 30px 0
 	+media-breakpoint-up(sm)
 		padding: 40px 0
-	+media-breakpoint-up(xl)
-		padding: 80px 0
 	+media-breakpoint-up(wxp)
 	&_gray
 		background-color: #fafafa
@@ -480,7 +478,7 @@ img
 		+media-breakpoint-up(lg)
 			color: #fff
 			&:hover
-				color: #0c4e4e
+				color: #cedeab
 	/* .menu__top */
 	&__top
 		display: flex
@@ -504,6 +502,7 @@ img
 		color: $black
 
 .first
+	background-size: cover
 	background-image: url('../images/first.jpg')
 	background-repeat: no-repeat
 	background-position: center
@@ -515,7 +514,7 @@ img
 	position: relative
 	overflow: hidden
 	+media-breakpoint-up(sm)
-		height: 900px
+		height: 100vh
 	video
 		position: absolute
 		display: block
@@ -528,12 +527,12 @@ img
 		align-items: flex-start
 		position: relative
 		height: auto
-		+media-breakpoint-up(lg)
-			height: 900px
+		+media-breakpoint-up(sm)
+			height: 100vh
 	/* .first__title */
 	&__title
 		font-weight: 500
-		font-size: 28px
+		font-size: 22px
 		line-height: 110%
 		text-align: center
 		color: #fff
@@ -615,7 +614,7 @@ img
 	margin: 0 auto
 	margin-bottom: 24px
 	span
-		background: linear-gradient(90deg, #266746 0%, #66A431 50%, #266746 100%)
+		background: linear-gradient(90deg, #266746 0%, #5b9935 100%)
 		background-clip: text
 		-webkit-background-clip: text
 		-webkit-text-fill-color: transparent
@@ -670,7 +669,7 @@ img
 	/* .we-work__item-title */
 	&__item-title
 		font-weight: 500
-		font-size: 20px
+		font-size: 18px
 		line-height: 120%
 		text-align: center
 		color: $black
@@ -693,10 +692,8 @@ img
 	&_rtl
 		margin-bottom: 360px
 		+media-breakpoint-up(md)
-			margin-bottom: 80px
+			margin-bottom: 50px
 	&_ltr
-		+media-breakpoint-up(md)
-			margin-bottom: 80px
 	/* .marquee__item */
 	&__item
 		font-weight: 500
@@ -721,7 +718,7 @@ img
 	+media-breakpoint-up(md)
 		padding-top: 70px
 	+media-breakpoint-up(lg)
-		padding-top: 110px
+		padding: 125px 0
 	/* .marquee-block__logo-block */
 	&__logo-block
 		border-radius: 16px
@@ -958,7 +955,7 @@ img
 		left: 0
 		bottom: 0
 		.circle-btns__btn-svg
-			transform: rotate(180deg)
+			transform: rotate(180deg) translateY(-72px)
 	/* .circle-btns__btn_next */
 	&__btn_next
 		right: 0
@@ -966,6 +963,7 @@ img
 
 	/* .circle-btns__btn-svg */
 	&__btn-svg
+		transform: translateY(72px)
 		width: 30px
 		+media-breakpoint-up(sm)
 			margin-top: 110px
@@ -1020,7 +1018,7 @@ img
 	/* .with-us__title */
 	&__title
 		font-weight: 500
-		font-size: 28px
+		font-size: 22px
 		line-height: 120%
 		text-align: center
 		color: #262626
@@ -1041,12 +1039,12 @@ img
 	/* .goods__title */
 	&__title
 		font-weight: 500
-		font-size: 20px
+		font-size: 18px
 		line-height: 120%
 		color: #262626
 		margin-bottom: 32px
 		+media-breakpoint-up(sm)
-			font-size: 28px
+			font-size: 22px
 	/* .goods__row */
 	&__row
 		display: flex
@@ -1097,7 +1095,7 @@ img
 		line-height: 120%
 		text-align: center
 		color: #262626
-		margin-bottom: 28px
+		margin-bottom: 16px
 		min-height: 50px
 		max-height: 50px
 		overflow: hidden
@@ -1163,11 +1161,11 @@ img
 	+media-breakpoint-up(sm)
 		padding: 70px
 	+media-breakpoint-up(lg)
-		padding: 183px
+		padding: 80px 183px
 	/* .form-block__title */
 	&__title
 		font-weight: 500
-		font-size: 28px
+		font-size: 22px
 		line-height: 110%
 		text-align: center
 		color: #fff
@@ -1177,7 +1175,7 @@ img
 		span
 			color: #99d420
 		+media-breakpoint-up(sm)
-			font-size: 48px
+			font-size: 38px
 	/* .form-block__btn */
 	&__btn
 		text-align: center
@@ -1197,7 +1195,7 @@ img
 	&__top
 		padding: 30px 0
 		+media-breakpoint-up(sm)
-			padding: 60px 0
+			padding: 40px 0
 
 	/* .footer__row */
 	&__row
@@ -1247,6 +1245,8 @@ img
 		border-top: 1px solid #d6d6d6
 		+media-breakpoint-up(sm)
 			gap: 24px
+		+media-breakpoint-up(lg)
+			font-size: 16px
 	/* .footer__text */
 	&__text
 		color: $text
@@ -1266,7 +1266,7 @@ img
 		color: #0c4e4e
 		text-decoration: none
 	+media-breakpoint-up(lg)
-		font-size: 28px
+		font-size: 16px
 
 .stock
 	/* .stock__row */
@@ -1301,7 +1301,7 @@ img
 		color: #262626
 		margin-bottom: 16px
 		+media-breakpoint-up(sm)
-			font-size: 28px
+			font-size: 22px
 			margin-bottom: 32px
 	/* .stock__list */
 	&__list
@@ -1382,12 +1382,12 @@ img
 	/* .map-slider__title */
 	&__title
 		font-weight: 500
-		font-size: 20px
+		font-size: 18px
 		line-height: 120%
 		color: #262626
 		margin-bottom: 16px
 		+media-breakpoint-up(sm)
-			font-size: 28px
+			font-size: 22px
 		+media-breakpoint-up(md)
 			max-width: 550px
 			margin-bottom: 24px
@@ -1529,7 +1529,7 @@ img
 	/* .map__circle-item-num */
 	&__circle-item-num
 		font-weight: 500
-		font-size: 28px
+		font-size: 22px
 		line-height: 120%
 		background: linear-gradient(229deg, #0c4e4e 0%, #99d420 100%)
 		background-clip: text
@@ -1710,8 +1710,9 @@ img
 		+media-breakpoint-up(lg)
 			display: flex
 			justify-content: space-between
+			align-items: baseline
 			gap: 10px
-			padding: 40px
+			padding: 20px
 	/* .table__num */
 	&__num
 		color: #656565
@@ -1720,9 +1721,7 @@ img
 		margin-bottom: 8px
 		+media-breakpoint-up(sm)
 			margin-bottom: 0
-			font-size: 18px
-		+media-breakpoint-up(lg)
-			font-size: 20px
+			font-size: 16px
 	/* .table__title */
 	&__title
 		font-weight: 500
@@ -1733,14 +1732,16 @@ img
 		margin-bottom: 8px
 		+media-breakpoint-up(sm)
 			margin-bottom: 0
-			font-size: 18px
+			font-size: 16px
 	/* .table__text */
 	&__text
 		color: #656565
 		flex: 1
 		font-size: 16px
 		+media-breakpoint-up(sm)
-			font-size: 18px
+			font-size: 16px
+		+media-breakpoint-up(lg)
+			flex: 1 1 40%
 
 .contacts
 	/* .contacts__row */
@@ -1774,6 +1775,8 @@ img
 			flex: 1 1 calc(50% - 40px)
 		+media-breakpoint-up(wxp)
 			flex: 1 1 calc(50% - 80px)
+		&_full
+			flex: 1 1 100%
 	/* .contacts__info-item-key */
 	&__info-item-key
 		font-weight: 400
@@ -2201,13 +2204,13 @@ img
 	/* .page-404__title */
 	&__title
 		font-weight: 500
-		font-size: 20px
+		font-size: 18px
 		line-height: 120%
 		text-align: center
 		color: #262626
 		margin-bottom: 40px
 		+media-breakpoint-up(sm)
-			font-size: 28px
+			font-size: 22px
 @keyframes "fade"
 	from
 		opacity: 0
