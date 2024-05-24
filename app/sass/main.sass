@@ -817,7 +817,10 @@ img
 		font-size: 14px
 		+media-breakpoint-up(md)
 			max-width: 150px
-			font-size: 12px
+			font-size: 14px
+			overflow: hidden
+			-webkit-box-orient: vertical
+			-webkit-line-clamp: 5
 		// +media-breakpoint-up(lg)
 		// 	font-size: 14px
 		// 	max-width: 200px
@@ -831,7 +834,7 @@ img
 		color: #262626
 		max-width: 208px
 		+media-breakpoint-up(md)
-			max-width: 150px
+			max-width: 130px
 			margin: 0 auto
 			font-size: 16px
 			text-align: center
@@ -843,7 +846,7 @@ img
 		transition: transform .35s ease-out
 		&.active
 			.circle__item-text
-				display: block
+				display: -webkit-box
 			.circle__item-title
 				display: none
 		+media-breakpoint-up(md)
@@ -859,22 +862,24 @@ img
 		top: 18%
 		left: 22%
 		&.active
-			top: 10%
-			left: 19%
+			top: 13%
+			left: 16%
 		+media-breakpoint-up(md)
 			&.active
 				top: 13%
+				left: 19%
 	&__item_2
 		// top: 200px
 		// left: 650px
 		top: 18%
 		right: 22%
 		&.active
-			top: 12%
-			right: 17%
+			top: 13%
+			right: 16%
 		+media-breakpoint-up(md)
 			&.active
 				top: 13%
+				right: 17%
 		+media-breakpoint-up(xl)
 			&.active
 				right: 19%
@@ -894,14 +899,14 @@ img
 		right: 25%
 		&.active
 			bottom: 12%
-			right: 19%
+			right: 15%
 		+media-breakpoint-up(md)
 			&.active
-				bottom: 16%
-				right: 17%
-		+media-breakpoint-up(xl)
-			&.active
-				right: 19%
+				bottom: 13%
+				right: 22%
+		// +media-breakpoint-up(xl)
+		// 	&.active
+		// 		right: 19%
 	&__item_5
 		bottom: 20%
 		left: 25%
@@ -910,18 +915,18 @@ img
 			left: 16%
 		+media-breakpoint-up(md)
 			&.active
-				bottom: 16%
-				left: 17%
-		+media-breakpoint-up(xl)
-			&.active
-				left: 19%
+				bottom: 13%
+				left: 22%
+		// +media-breakpoint-up(xl)
+		// 	&.active
+		// 		left: 19%
 	&__item_6
 		// left: 100px
 		// top: 550px
 		top: 49%
 		left: 9%
 		&.active
-			top: 41%
+			top: 43%
 			left: 0%
 		+media-breakpoint-up(md)
 			&.active
