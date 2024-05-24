@@ -1480,8 +1480,12 @@ img
 			top: 0
 			left: 0
 	&__circle-position-wrapper
-		+media-breakpoint-up(xl)
-			transform: translate(-50%, 50%)
+		@media (min-width: 1200px)
+			transform: translate(-50%, 70%)
+
+			@media (min-height: 1024px)
+				transform: translate(-50%, 50%)
+
 	&__circle-inner-wrapper
 		+media-breakpoint-up(xl)
 			position: sticky

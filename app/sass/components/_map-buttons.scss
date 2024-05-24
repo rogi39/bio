@@ -1,5 +1,6 @@
 .map-buttons {
   @include media-breakpoint-up(xl) {
+    display: none;
     position: absolute;
     top: 0;
     left: calc((100vw - 1750px) / 2 + 1750px * 0.43);
