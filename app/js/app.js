@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             pin: true,
             scrub: 1,
             snap: 1 / (sections.length - 1),
-            end: "+=1000",
+            end: "+=2000",
             // base vertical scrolling on how wide the container is so it feels more natural.
             // end: "+=300",
             // duration: 5,

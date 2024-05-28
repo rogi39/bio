@@ -1264,12 +1264,14 @@ img
 
 .mail, .phone-big
 	font-weight: 500
-	font-size: 26px
+	font-size: 20px
 	line-height: 120%
 	color: #0c4e4e
 	&:hover
 		color: #0c4e4e
 		text-decoration: none
+	+media-breakpoint-up(md)
+		font-size: 26px
 	+media-breakpoint-up(lg)
 		font-size: 16px
 
@@ -1767,6 +1769,8 @@ img
 			margin-bottom: 0
 			padding: 0 15px
 			flex: 0 0 50%
+		+media-breakpoint-up(lg)
+			align-self: flex-start
 	/* .contacts__info */
 	&__info
 		+media-breakpoint-up(xl)
