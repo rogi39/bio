@@ -401,79 +401,58 @@ function fadeOut(el, timeout) {
 
 let filterItems = document.querySelectorAll(".filter__item");
 filterItems.forEach((el) => {
+  let products = document.querySelectorAll(".goods");
+
+  const showAllGoods = () => {
+    document.querySelectorAll(".filter__item.active").forEach((elm) => {
+      elm.classList.remove("active");
+    });
+
+    document.querySelector(".filter__item").classList.add("active");
+
+    products.forEach((product) => {
+      product.removeAttribute("style");
+      product.classList.remove("active");
+    });
+  };
+
   el.addEventListener("click", function (e) {
+    /** @type {HTMLElement} */
     let target = e.target;
     // target.classList.toggle('active');
     let targetAtr = target.dataset.catFilter;
-    let goods = document.querySelectorAll(".goods");
-    if (targetAtr !== "all") {
-      document
-        .querySelector('.filter__item[data-cat-filter="all"]')
-        .classList.remove("active");
-      if (target.classList.contains("active")) {
-        target.classList.remove("active");
-        goods.forEach((good) => {
-          let goodAtr = good.dataset.goodsCat;
-          if (goodAtr == targetAtr) {
-            if (good.classList.contains("active")) {
-              good.style.display = "none";
-              good.classList.remove("active");
-            }
-          } else {
-            // good.classList.add('active');
-          }
-        });
-        if (!document.querySelector(".goods.active")) {
-          document.querySelectorAll(".filter__item.active").forEach((elm) => {
-            elm.classList.remove("active");
-          });
-          document.querySelector(".filter__item").classList.add("active");
 
-          goods.forEach((good) => {
-            // console.log(good);
-            good.removeAttribute("style");
-            good.classList.remove("active");
-          });
-        }
-      } else {
-        target.classList.add("active");
-        goods.forEach((good) => {
-          let goodAtr = good.dataset.goodsCat;
-          if (goodAtr != targetAtr) {
-            if (!good.classList.contains("active")) {
-              good.style.display = "none";
-            }
-          } else {
-            good.classList.add("active");
-          }
-        });
-      }
-    }
     if (targetAtr === "all") {
-      document.querySelectorAll(".filter__item.active").forEach((elm) => {
-        elm.classList.remove("active");
-      });
-      target.classList.add("active");
+      showAllGoods();
 
-      goods.forEach((good) => {
-        // console.log(good);
-        good.removeAttribute("style");
-        good.classList.remove("active");
-      });
+      return;
     }
-    // if (targetAtr === 'all' && !target.classList.contains('active')) {
-    // 	goods.forEach(good => {
-    // 		console.log(good);
-    // 		good.removeAttribute('style');
-    // 	});
-    // 	return false;
-    // }
-    // if (targetAtr === 'all') {
 
-    // 	return false;
-    // }
+    if (target.classList.contains("active")) {
+      showAllGoods();
 
-    // console.log(target.dataset.catFilter);
+      return;
+    }
+
+    const activeFilterItem = document.querySelector(".filter__item.active");
+
+    activeFilterItem.classList.remove("active");
+
+    target.classList.add("active");
+
+    products.forEach((product) => {
+      let productAtr = product.dataset.goodsCat;
+
+      if (productAtr !== targetAtr) {
+        product.style.display = "none";
+        product.classList.remove("active");
+
+        return;
+      }
+
+      product.style.display = "block";
+      product.classList.add("active");
+    });
   });
 });
 
