@@ -323,55 +323,69 @@
                 }
               });
               let btns = document.querySelectorAll(".circle-btns__btn");
+
+              let timer;
+
               btns.forEach((el) => {
                 el.addEventListener("click", function (e) {
-                  let circle = document.querySelector(".circle");
-                  let circleDeg = circle.dataset.circleDeg;
-                  let circleItemDeg = circle.dataset.circleItemDeg;
-                  let activeSlide = circle.dataset.activeSlide;
+                  if (timer) {
+                    clearTimeout(timer);
+                  }
 
-                  if (e.currentTarget.dataset.circleBtn === "prev") {
-                    circle.style.transform = `rotate(${Number(circleDeg) + 60}deg)`;
-                    circle.dataset.circleDeg = Number(circleDeg) + 60;
-                    document.querySelectorAll(".circle__item").forEach((el) => {
-                      el.style.transform = `rotate(${Number(circleItemDeg) - 60}deg)`;
-                    });
-                    circle.dataset.circleItemDeg = Number(circleItemDeg) - 60;
-                    if (activeSlide < 2) {
-                      circle.dataset.activeSlide = 6;
-                    } else {
-                      circle.dataset.activeSlide--;
+                  timer = setTimeout(() => {
+                    let circle = document.querySelector(".circle");
+                    let circleDeg = circle.dataset.circleDeg;
+                    let circleItemDeg = circle.dataset.circleItemDeg;
+                    let activeSlide = circle.dataset.activeSlide;
+
+                    if (el.dataset.circleBtn === "prev") {
+                      circle.style.transform = `rotate(${Number(circleDeg) + 60}deg)`;
+                      circle.dataset.circleDeg = Number(circleDeg) + 60;
+                      document
+                        .querySelectorAll(".circle__item")
+                        .forEach((el) => {
+                          el.style.transform = `rotate(${Number(circleItemDeg) - 60}deg)`;
+                        });
+                      circle.dataset.circleItemDeg = Number(circleItemDeg) - 60;
+                      if (activeSlide < 2) {
+                        circle.dataset.activeSlide = 6;
+                      } else {
+                        circle.dataset.activeSlide--;
+                      }
                     }
-                  }
-                  if (e.currentTarget.dataset.circleBtn === "next") {
-                    circle.style.transform = `rotate(${Number(circleDeg) - 60}deg)`;
-                    circle.dataset.circleDeg = Number(circleDeg) - 60;
-                    document.querySelectorAll(".circle__item").forEach((el) => {
-                      el.style.transform = `rotate(${Number(circleItemDeg) + 60}deg)`;
-                    });
-                    circle.dataset.circleItemDeg = Number(circleItemDeg) + 60;
-                    if (activeSlide > 5) {
-                      circle.dataset.activeSlide = 1;
-                    } else {
-                      circle.dataset.activeSlide++;
+
+                    if (el.dataset.circleBtn === "next") {
+                      circle.style.transform = `rotate(${Number(circleDeg) - 60}deg)`;
+                      circle.dataset.circleDeg = Number(circleDeg) - 60;
+                      document
+                        .querySelectorAll(".circle__item")
+                        .forEach((el) => {
+                          el.style.transform = `rotate(${Number(circleItemDeg) + 60}deg)`;
+                        });
+                      circle.dataset.circleItemDeg = Number(circleItemDeg) + 60;
+                      if (activeSlide > 5) {
+                        circle.dataset.activeSlide = 1;
+                      } else {
+                        circle.dataset.activeSlide++;
+                      }
                     }
-                  }
-                  document
-                    .querySelector(".circle__path.active")
-                    .classList.remove("active");
-                  document
-                    .querySelector(".circle__item.active")
-                    .classList.remove("active");
-                  document
-                    .querySelector(
-                      `.circle__path[data-circle-path="${circle.dataset.activeSlide}"]`
-                    )
-                    .classList.add("active");
-                  document
-                    .querySelector(
-                      `.circle__item[data-circle-item="${circle.dataset.activeSlide}"]`
-                    )
-                    .classList.add("active");
+                    document
+                      .querySelector(".circle__path.active")
+                      .classList.remove("active");
+                    document
+                      .querySelector(".circle__item.active")
+                      .classList.remove("active");
+                    document
+                      .querySelector(
+                        `.circle__path[data-circle-path="${circle.dataset.activeSlide}"]`
+                      )
+                      .classList.add("active");
+                    document
+                      .querySelector(
+                        `.circle__item[data-circle-item="${circle.dataset.activeSlide}"]`
+                      )
+                      .classList.add("active");
+                  }, 100);
                 });
               });
 
